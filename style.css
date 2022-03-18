@@ -20,6 +20,10 @@ body {
   grid-column-gap: 1.25rem;
 }
 
+.italic {
+  font-family: "Neue Montreal Italic";
+}
+
 body.open {
   overflow-y: auto;
 }
