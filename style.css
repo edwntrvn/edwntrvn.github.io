@@ -380,6 +380,6 @@ footer.open {
 @media (max-width: 480px) {
   .thumbnail:not(:last-child),
   .gallery__image:not(:last-child) {
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.75rem;
   }
 }
