@@ -242,12 +242,13 @@ footer.open {
 
 
 
-.about__info__introduction:not(:last-child) {
-  margin-bottom: 0.5rem;
+.about__info__introduction:not(:last-child),
+.about__info__employment:not(:last-child) {
+  margin-bottom: 0.75rem;
 }
 
 .about__info:not(:last-child) {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.75rem;
 }
 
 .about__info--flex {
