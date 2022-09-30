@@ -256,6 +256,10 @@ footer.open {
   flex-direction: row;
 }
 
+.about__info--flex:not(:last-child) {
+  margin-bottom: 0.75rem;
+}
+
 .about__info--flex__children {
   flex: 1;
 }
@@ -310,6 +314,7 @@ footer.open {
     flex-direction: column;
   }
 
+  .about__info--flex:not(:last-child),
   .about__info--flex__children:not(:last-child) {
     margin-bottom: 0.75rem;
   }
