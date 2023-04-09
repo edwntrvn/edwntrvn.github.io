@@ -215,8 +215,14 @@ footer.open {
 }
 
 .additional-info {
-  margin-top: 0.5rem;
+  margin-top: 0.75rem;
 }
+
+.additional-info__team:not(:first-child) {
+  margin-top: 0.125rem;
+}
+
+
 
 .project-description--current {
   margin-bottom: 0.75rem;
@@ -260,7 +266,7 @@ footer.open {
   margin-bottom: 0.75rem;
 }
 
-.about__info--flex__children {
+.about__info--flex__child {
   flex: 1;
 }
 
@@ -315,7 +321,7 @@ footer.open {
   }
 
   .about__info--flex:not(:last-child),
-  .about__info--flex__children:not(:last-child) {
+  .about__info--flex__child:not(:last-child) {
     margin-bottom: 0.75rem;
   }
 }
