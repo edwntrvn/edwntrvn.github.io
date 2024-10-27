@@ -31,7 +31,7 @@ a:hover {
 }
 
 .top {
-    position: fixed;
+    position: absolute;
     top: 12px;
     left: 16px;
 }
@@ -41,7 +41,7 @@ header {
 }
 
 footer {
-    position: fixed;
+    position: absolute;
     bottom: 12px;
     left: 16px;
 }
