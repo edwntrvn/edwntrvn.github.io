@@ -30,6 +30,16 @@ a:hover {
     color: #0000ff;
 }
 
+::selection {
+    color: #fff;
+    background: #0000ff;
+}
+
+::-moz-selection {
+    color: #fff;
+    background: #0000ff;
+}
+
 .top {
     position: absolute;
     top: 12px;
