@@ -57,7 +57,7 @@ footer {
     position: absolute;
     bottom: 0px;
     left: 0px;
-    padding: 14px 16px 14px 16px;
+    padding: 0px 16px 14px 16px;
 }
 
 nav {
@@ -132,5 +132,63 @@ nav {
         flex-direction: column;
         margin-top: 8px;
         gap: 8px;
+    }
+}
+
+@media (510px <= width <= 1009px) and (max-height: 715px) {
+    body {
+        background-color: red;
+    }
+
+    .main {
+        flex-direction: column;
+        gap: 32px;
+        padding: 12px 16px 32px 16px;
+    }
+
+    .clients-and-services {
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .personal-bio {
+        margin-right: 0px;
+    }
+
+    footer {
+        position: static;
+        padding: 0px 16px 14px 16px;
+    }
+
+    nav {
+        flex-direction: column;
+        margin-top: 12px;
+        gap: 12px;
+    }
+}
+
+@media (min-width: 1729px) and (max-height: 715px) {
+    body {
+        background-color: red;
+    }
+
+    .main {
+        padding: 12px 16px 32px 16px;
+    }
+
+    .clients-and-services {
+        gap: 32px;
+    }
+
+    footer {
+        position: static;
+        padding: 0px 16px 14px 16px;
+    }
+
+    nav {
+        flex-direction: column;
+        margin-top: 12px;
+        gap: 12px;
     }
 }
