@@ -106,29 +106,8 @@ nav {
 }
 
 @media (max-width: 509px) {
-    .main {
-        padding: 12px 16px 32px 16px;
-    }
-    
-    footer {
-        position: static;
-        padding: 0px 16px 14px 16px;
-    }
-    
-    nav {
-        flex-direction: column;
-        margin-top: 12px;
-        gap: 12px;
-    }
-}
-
-@media (max-width: 509px) {
     body {
         font-size: 14px;
-    }
-
-    .personal-bio {
-        max-width: 344px;
     }
 
     .main {
@@ -136,11 +115,21 @@ nav {
         padding: 12px 16px 24px 16px;
     }
 
+    .personal-bio {
+        max-width: 344px;
+    }
+
     .clients-and-services {
         gap: 24px;
     }
 
+    footer {
+        position: static;
+        padding: 0px 16px 14px 16px;
+    }
+    
     nav {
+        flex-direction: column;
         margin-top: 8px;
         gap: 8px;
     }
