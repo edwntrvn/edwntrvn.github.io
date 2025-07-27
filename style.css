@@ -6,22 +6,16 @@ html, body {
 
 body {
     font-family: "neue-haas-unica", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    line-height: 135%;
-    font-size: 12px;
-    color: #666;
-    background-color: #fff;
-}
-
-h1, 
-.nav-link {
     font-weight: 500;
-    color: #000;
+    font-style: normal;
+    line-height: 120%;
+    font-size: 16px;
+    color: #000000;
+    background-color: #ffffff;
 }
 
 a {
-    color: #666;
+    color: #000000;
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -31,32 +25,123 @@ a:hover {
 }
 
 ::selection {
-    color: #fff;
-    background: #0000ff;
+    color: #0000ff;
 }
 
 ::-moz-selection {
-    color: #fff;
-    background: #0000ff;
+    color: #0000ff;
 }
 
-.top {
-    position: absolute;
-    top: 12px;
-    left: 16px;
+.main {
+    display: flex;
+    padding: 12px 120px 12px 16px;
 }
 
 header {
-    margin-bottom: 16px;
+    flex: 1;
+}
+
+.personal-bio {
+    max-width: 400px;
+    margin-right: 120px;
+}
+
+.clients-and-services {
+    display: flex;
+    flex: 1;
+    gap: 120px;
+    justify-content: flex-end;
 }
 
 footer {
     position: absolute;
-    bottom: 12px;
-    left: 16px;
+    bottom: 0px;
+    left: 0px;
+    padding: 14px 16px 14px 16px;
 }
 
 nav {
     display: flex;
-    gap: 0 48px;
+    gap: 80px;
+    margin-top: 16px;
+}
+
+
+
+@media (max-width: 1193px) {
+    .main {
+        padding: 12px 80px 12px 16px;
+    }
+
+    .personal-bio {
+        margin-right: 80px;
+    }
+
+    .clients-and-services {
+        gap: 80px;
+    }
+}
+
+@media (max-width: 1073px) {
+    .main {
+        padding: 12px 16px 12px 16px;
+    }
+}
+
+@media (max-width: 1009px) or (min-width: 1729px) {
+    .main {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .clients-and-services {
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .personal-bio {
+        margin-right: 0px;
+    }
+}
+
+@media (max-width: 509px) {
+    .main {
+        padding: 12px 16px 32px 16px;
+    }
+    
+    footer {
+        position: static;
+        padding: 0px 16px 14px 16px;
+    }
+    
+    nav {
+        flex-direction: column;
+        margin-top: 12px;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 412px) {
+    body {
+        font-size: 14px;
+    }
+
+    .personal-bio {
+        max-width: 344px;
+    }
+
+    .main {
+        gap: 24px;
+        padding: 12px 16px 24px 16px;
+    }
+
+    .clients-and-services {
+        gap: 24px;
+    }
+
+    nav {
+        margin-top: 8px;
+        gap: 8px;
+    }
 }
