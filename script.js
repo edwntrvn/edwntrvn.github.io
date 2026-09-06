@@ -189,6 +189,7 @@ const imageCredit = document.querySelector("#image-credit");
 const imageCreditButton = document.querySelector("#image-credit-button");
 const imageCreditUsername = document.querySelector("#image-credit-username");
 const imageCreditDate = document.querySelector("#image-credit-date");
+const screensaver = document.querySelector(".screensaver");
 
 const shuffledImages = [...images];
 
@@ -233,6 +234,11 @@ document.addEventListener("mousemove", function (event) {
 });
 
 document.addEventListener("click", function (event) {
+  // Do not advance the gallery while the screensaver is active.
+  if (screensaver.classList.contains("active")) {
+    return;
+  }
+
   const imageBounds = image.getBoundingClientRect();
 
   const clickedInsideImage =
@@ -292,7 +298,6 @@ mobileViewport.addEventListener("change", handleViewportChange);
 
 // SCREENSAVER
 
-const screensaver = document.querySelector(".screensaver");
 const originalTitle = document.title;
 
 const touchDevice = window.matchMedia("(pointer: coarse)");
@@ -314,7 +319,10 @@ if (!touchDevice.matches) {
     }
   });
 
-  screensaver.addEventListener("click", () => {
+  screensaver.addEventListener("click", (event) => {
+    // Prevent this click from reaching the gallery click handler.
+    event.stopPropagation();
+
     screensaver.classList.remove("active");
     document.body.classList.remove("screensaver-active");
     document.title = originalTitle;
