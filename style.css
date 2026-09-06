@@ -182,6 +182,10 @@ body.screensaver-active .gallery-image {
     height: auto;
     aspect-ratio: 9 / 16;
   }
+
+  body {
+    padding: 12px;
+  }
 }
 
 @media (max-width: 400px) {
