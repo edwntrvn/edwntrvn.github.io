@@ -173,6 +173,12 @@ const images = [
     src: "/images/792235790_18416901649158585_753869868644136751_n.jpg",
     username: "limdongjoon",
     date: "2026.09.04"
+  },
+
+  {
+    src: "/images/794467560_18155448277507743_7418515687244248556_n.jpg",
+    username: "clrdlne",
+    date: "2026.09.05"
   }
 ];
 
