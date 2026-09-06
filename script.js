@@ -222,6 +222,13 @@ displayImage();
 // GALLERY HOVER INTERACTION
 
 document.addEventListener("mousemove", function (event) {
+  // The image credit is its own interactive area.
+  // Do not show the gallery's pointer cursor while hovering over it.
+  if (event.target.closest(".image-credit")) {
+    document.body.classList.remove("gallery-hover");
+    return;
+  }
+
   const imageBounds = image.getBoundingClientRect();
 
   const pointerInsideImage =
@@ -239,6 +246,12 @@ document.addEventListener("click", function (event) {
     return;
   }
 
+  // Do not advance the gallery when interacting with the image credit,
+  // its link, or any other button/link on the page.
+  if (event.target.closest(".image-credit, a, button")) {
+    return;
+  }
+
   const imageBounds = image.getBoundingClientRect();
 
   const clickedInsideImage =
@@ -248,10 +261,6 @@ document.addEventListener("click", function (event) {
     event.clientY <= imageBounds.bottom;
 
   if (!clickedInsideImage) {
-    return;
-  }
-
-  if (event.target.closest("a, button")) {
     return;
   }
 
