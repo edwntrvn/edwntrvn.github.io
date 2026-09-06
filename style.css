@@ -131,6 +131,7 @@ body.screensaver-active .gallery-image {
   bottom: 0;
   z-index: 1;
   background-color: #ffffff;
+  text-wrap: pretty;
 }
 
 .screensaver {
@@ -177,7 +178,7 @@ body.screensaver-active .gallery-image {
 @media (max-width: 600px) {
   .gallery-image-anchor,
   .image-credit-anchor {
-    width: 50%;
+    width: 45%;
     height: auto;
     aspect-ratio: 9 / 16;
   }
